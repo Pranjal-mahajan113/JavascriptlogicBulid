@@ -13,11 +13,10 @@ console.log(reversestring("pranjal"));
 console.log(reversestring("Software development"));
 // console.log(reversestring(9999));
 
- function reversestring2(inputsting2) {
- const splitInput = inputsting2.split("");
- const reverseArray = splitInput.reverse("");
- const result = reverseArray.join("");
- return result;
-
- }
- console.log(reversestring2("pranjal"));
+function reversestring2(inputsting2) {
+  const splitInput = inputsting2.split("");
+  const reverseArray = splitInput.reverse();
+  const result = reverseArray.join("");
+  return result;
+}
+console.log(reversestring2("pranjal"));
