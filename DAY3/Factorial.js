@@ -3,10 +3,12 @@ function factorial(inputnumber) {
     throw new Error("Only positive num");
   }
 
-  let result = 1;
+  // let result = 1;
 
   for (let i = 1; i <= inputnumber; i++) {
     // result = result * i;
+      let result = 1;
+
     result *= i;
   }
   return result;
