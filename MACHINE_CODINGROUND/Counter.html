@@ -43,19 +43,41 @@
   <body>
     <div class="container">
       <button id="increase">INCREMENT</button>
-      <button id="decrese">DECREMENT</button>
+      <button id="decrease">DECREMENT</button>
       <button id="clear">RESET</button>
       <p id="count">1</p>
     </div>
   </body>
   <script>
     const inc = document.getElementById("increase");
-    const dec = document.getElementById("decrese");
+    const dec = document.getElementById("decrease");
     const reset = document.getElementById("clear");
     const countshow = document.getElementById("count");
+    const container = document.querySelector(".container");
     let count = 1;
-    inc.addEventListener("click", () => {
-      count++;
+    // inc.addEventListener("click", () => {
+    //   count++;
+    //   countshow.innerHTML = count;
+    // });
+
+    // dec.addEventListener("click", () => {
+    //   count--;
+    //   countshow.innerHTML = count;
+    // });
+
+    // reset.addEventListener("click", () => {
+    //   count = 0;
+    //   countshow.innerHTML = count;
+    // });
+
+    container.addEventListener("click", (e) => {
+      if (e.target.id === "increase") {
+        count++;
+      } else if (e.target.id === "decrease") {
+        count--;
+      } else if (e.target.id === "clear") {
+        count = 0;
+      }
       countshow.innerHTML = count;
     });
   </script>
