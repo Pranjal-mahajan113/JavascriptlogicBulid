@@ -1,4 +1,4 @@
-//25 FEB 🚀🚀🚀🚀🚀
+//24 FEB 🚀🚀🚀🚀🚀
 
 let a = "Hello wolrd";
 console.log(a);
@@ -26,12 +26,20 @@ evenodd(9);
 evenodd(4);
 //====================================================
 function maxnum(input) {
+  if (input.length === 0) {
+    return null;
+  }
   let max = input[0]; // assume first is max
   for (let i = 1; i < input.length; i++) {
     if (input[i] > max) {
       max = input[i];
     }
   }
-  console.log("Maximum number is:",max)
+  return max;
 }
-maxnum([0, 7, 2, 9, 19]);
+console.log(maxnum([0, 7, 2, 9, 19]));
+console.log(maxnum([100, 100, 100]));
+console.log(maxnum([-10, -20, -3, -1]));
+console.log(maxnum([42]));
+console.log(maxnum([]));
+console.log(maxnum([1,2,3,4,5]))
