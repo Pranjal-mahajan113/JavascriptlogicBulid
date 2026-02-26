@@ -1,4 +1,7 @@
 function factorial(num) {
+  if (typeof num !== "number") return false;
+  if (!Number.isInteger(num)) return false;
+  if (num < 0) return false;
   let fact = 1;
   for (let i = 1; i <= num; i++) {
     fact = i * fact;
