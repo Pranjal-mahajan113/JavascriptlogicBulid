@@ -10,6 +10,12 @@ promise.then(function(){
 //
 function createOrder(cart){
     const pr = new Promise(function(resolve,reject){
+      if(!validateCart(cart)){
+        const err = new Error("Cart is not valid")
+        reject(err);
+
+      }
+    
 
     })
     return pr;
